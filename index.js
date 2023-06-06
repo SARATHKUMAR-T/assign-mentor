@@ -23,6 +23,15 @@ app.use("/api",studentRouter)
 // mentor router
 app.use("/api",mentorRouter)
 
+// 
+app.use('/',(req,res)=>{
+    try {
+        res.status(200).send("welcome to the website")
+    } catch (error) {
+        
+    }
+})
+
 
 // listening to port
 app.listen(process.env.PORT,()=>console.log('server started successfully'))
