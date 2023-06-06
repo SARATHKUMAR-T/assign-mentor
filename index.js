@@ -21,11 +21,11 @@ app.use("/api", studentRouter);
 // mentor router
 app.use("/api", mentorRouter);
 
-//
+//Landing page api
 app.use("/api", async (req, res) => {
   try {
-    const data = await student.find();
-    res.status(200).json({ message: "data loaded successfully", data: data });
+ 
+    res.status(200).json({ message: "data loaded successfully,Use postman to send request"});
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: "Internal server error" });
