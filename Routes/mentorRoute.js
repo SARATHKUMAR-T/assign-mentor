@@ -98,7 +98,7 @@ router.get("/previous", async (req, res) => {
         message: "data loaded successfully",
         previousMentor: previousMentor[0].previousMentors,
       });
-    if (!allStudents) {
+    if (!previousMentor) {
       res.status(400).json({ message: "No previous mentors" });
     }
   } catch (error) {
