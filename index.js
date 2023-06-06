@@ -22,7 +22,7 @@ app.use("/api", studentRouter);
 app.use("/api", mentorRouter);
 
 //
-app.use("/", async (req, res) => {
+app.use("/api", async (req, res) => {
   try {
     const data = await student.find();
     res.status(200).json({ message: "data loaded successfully", data: data });
